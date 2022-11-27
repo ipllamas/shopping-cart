@@ -6,13 +6,61 @@
   --white: #F9F7F7;
 }
 
-body {
-  padding: 0;
-  margin: 0;
-}
+/*Removes most CSS default styling, courtest of the Meyer Reset*/
+/*#region*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-.wrapper {
-  height: 200vh;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*#endregion*/
+
+.container {
+  height: 193vh;
+  background-color: var(--gray);
 }
 
 /*Hero on Home.js*/
@@ -32,11 +80,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--white);
-  background-color: #DBE2EF30;
   height: 300px;
   width: 500px;
   font-size: 72px;
+  gap: 2rem;
+  color: var(--white);
+  background-color: #DBE2EF30;
+  outline: 3px solid #F9F7F740;
+  outline-offset: -10px;
 }
 
 .heroText h1 {
@@ -45,27 +96,65 @@ body {
 }
 
 .heroText p {
-  font-size: 24px;
+  font-size: 28px;
   margin: 0;
   text-align: center;
 }
 /*#endregion*/
 
-.infoWrapper {
-  height: 25vh;
-  width: 100vw;
+.contentContainer {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: var(--darkblue);
+  flex-direction: column;
 }
 
-.infoImage {
-  height: 75%;
-  width: 200px;
-  background-color: var(--gray);
-  text-align: center;
+.imageContainer {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+  row-gap: 5rem;
+  padding: 2rem;
 }
+
+.itemImage {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  height: 250px;
+  width: 250px;
+}
+
+.itemImage img{
+  width: 250px;
+  height: 250px;
+}
+
+.infoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3rem;
+  padding: 5rem 10rem 0;
+  background-color: var(--gray);
+}
+
+.infoContainer img {
+  width: 500px;
+  height: auto;
+  padding-bottom: 3rem;
+}
+
+.infoContainer div {
+  width: 50%;
+  padding-bottom: 3rem;
+}
+
+.infoContainer div p {
+  text-align: center;
+  font-size: 48px;
+}
+
 /*Nav.js styling*/
 /*#region*/
 .navbar {
