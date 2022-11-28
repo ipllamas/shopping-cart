@@ -1,7 +1,7 @@
 import Nav from "../components/Nav";
 import hero from "../assets/starrysky.jpg";
 import stargaze from "../assets/stargazing.png";
-import productList from "../assets/Products";
+import productList from "../assets/Products"
 
 const Home = () => {
   return (
@@ -16,17 +16,17 @@ const Home = () => {
       <div className="contentContainer">
         <div className="imageContainer">
           <div className="itemImage">
-            <img src={productList[0][0]} alt={productList[0][1]}/>
+            <img src={productList[0].image} alt={productList[0].name}/>
           </div>
           <div className="itemImage">
-          <img src={productList[1][0]} alt={productList[1][1]}/>
+          <img src={productList[1].image} alt={productList[1].name}/>
           </div>
           <div className="itemImage">
-          <img src={productList[2][0]} alt={productList[2][1]}/>
+          <img src={productList[2].image} alt={productList[2].name}/>
           </div>
         </div>
         <div className="infoContainer">
-          <img src={stargaze}/>
+          <img src={stargaze} alt="A man looking at the sky with a telescope"/>
           <div>
             <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 

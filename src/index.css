@@ -102,6 +102,8 @@ table {
 }
 /*#endregion*/
 
+/*Home page content section*/
+/*#region*/
 .contentContainer {
   display: flex;
   flex-direction: column;
@@ -154,6 +156,23 @@ table {
   text-align: center;
   font-size: 48px;
 }
+/*#endregion*/
+
+.shopContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.productContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+  background: white;
+  padding: 5rem;
+  gap: 5rem;
+}
+
 
 /*Nav.js styling*/
 /*#region*/
@@ -190,6 +209,33 @@ table {
 .navItem a:focus {
   text-decoration: inherit;
   color: inherit;
+}
+
+/*#endregion*/
+
+/*itemCard.js styling*/
+/*#region*/
+.itemCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.itemCard img {
+  width: 250px;
+  height: 250px;
+  padding-bottom: 1rem;
+}
+
+.itemCard div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 250px;
+  font-size: 24px;
+  color: var(--white);
+  background-color: var(--darkblue);
 }
 
 /*#endregion*/
