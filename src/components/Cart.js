@@ -1,11 +1,13 @@
 const Cart = (props) => {
+  const cartItems = props.cartItems;
+
   return (
     <div className='shoppingCart'>
       <div className="cartContainer">
-        <h1>Shopping Cart</h1>
-        <p>test</p>
-        <p>test2</p>
-        <p>test3</p>
+        <h1>Your Cart</h1>
+        <div className="cartList">
+          <p>{cartItems.length === 0 && 'Your cart is empty.'}</p>
+        </div>
       </div>
     </div>
   )

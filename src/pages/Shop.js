@@ -4,18 +4,19 @@ import Cart from "../components/Cart";
 
 const Shop = (props) => {
   const productList = props.products;
-  const addCart = props.addCart;
+  const cartItems = props.cartItems;
+  const addToCart = props.addToCart;
 
   return (
     <div className="container shopContainer">
       <Nav />
-      <Cart />
+      <Cart cartItems={cartItems} />
       <div className="productContainer"> 
         {productList.map((product) => {
           return (
             <ItemCard image={product.image}
               name={product.name}
-              addCart={addCart}
+              addCart={addToCart}
               key={product.id}/>
           )
         })}

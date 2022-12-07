@@ -17,7 +17,7 @@ const App = () => {
           element={<Home products={productList} cartItems={cartItems} />}
         />
         <Route path="/shop"
-          element={<Shop products={productList} cartItems={cartItems} addCart={addToCart}/>}
+          element={<Shop products={productList} cartItems={cartItems} addToCart={addToCart}/>}
         />
       </Routes>
     </BrowserRouter>

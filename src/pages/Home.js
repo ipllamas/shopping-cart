@@ -5,11 +5,12 @@ import Cart from "../components/Cart";
 
 const Home = (props) => {
   const productList = props.products;
+  const cartItems = props.cartItems;
 
   return (  
     <div className="container">
       <Nav />
-      <Cart />
+      <Cart cartItems={cartItems} />
       <div className="hero" style = {{backgroundImage: `url(${hero})`}}>
         <div className="heroText">
           <h1>Gaze</h1>
