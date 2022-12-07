@@ -1,17 +1,22 @@
 import Nav from "../components/Nav";
 import ItemCard from '../components/ItemCard';
-import productList from "../assets/Products";
+import Cart from "../components/Cart";
 
-const Shop = () => {
-
+const Shop = (props) => {
+  const productList = props.products;
+  const addCart = props.addCart;
 
   return (
     <div className="container shopContainer">
       <Nav />
-      <div className="productContainer">
+      <Cart />
+      <div className="productContainer"> 
         {productList.map((product) => {
           return (
-            <ItemCard image={product.image} name={product.name} key={product.id}/>
+            <ItemCard image={product.image}
+              name={product.name}
+              addCart={addCart}
+              key={product.id}/>
           )
         })}
       </div>

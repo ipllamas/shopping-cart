@@ -1,12 +1,15 @@
 import Nav from "../components/Nav";
 import hero from "../assets/starrysky.jpg";
 import stargaze from "../assets/stargazing.png";
-import productList from "../assets/Products"
+import Cart from "../components/Cart";
 
-const Home = () => {
-  return (
+const Home = (props) => {
+  const productList = props.products;
+
+  return (  
     <div className="container">
       <Nav />
+      <Cart />
       <div className="hero" style = {{backgroundImage: `url(${hero})`}}>
         <div className="heroText">
           <h1>Gaze</h1>

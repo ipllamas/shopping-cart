@@ -158,6 +158,8 @@ table {
 }
 /*#endregion*/
 
+/*Shop page styling*/
+/*#region*/
 .shopContainer {
   display: flex;
   flex-direction: column;
@@ -172,7 +174,7 @@ table {
   padding: 5rem;
   gap: 5rem;
 }
-
+/*#endregion*/
 
 /*Nav.js styling*/
 /*#region*/
@@ -191,6 +193,8 @@ table {
 .navbar ul {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   list-style-type: none;
   padding: 4rem;
 }
@@ -202,6 +206,7 @@ table {
 .navItem a {
   text-decoration: none;
   font-size: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .navItem a:visited,
@@ -209,6 +214,16 @@ table {
 .navItem a:focus {
   text-decoration: inherit;
   color: inherit;
+}
+
+.navItem button {
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
+  font-size: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  cursor: pointer;
 }
 
 /*#endregion*/
@@ -239,3 +254,36 @@ table {
 }
 
 /*#endregion*/
+
+/*Shopping Cart display styling*/
+/*#region*/
+.shoppingCart {
+  display: none;
+  background-color: #00000080;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.cartContainer {
+  background-color: var(--gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate( -50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 36px;
+}
+
+.shoppingCart.visible {
+  display: inline;
+}
+/*#endregion*/
+
