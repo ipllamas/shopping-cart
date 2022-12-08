@@ -6,11 +6,13 @@ import Cart from "../components/Cart";
 const Home = (props) => {
   const productList = props.products;
   const cartItems = props.cartItems;
+  const cartShown = props.cartShown;
+  const toggleCart = props.toggleCart;
 
   return (  
     <div className="container">
-      <Nav />
-      <Cart cartItems={cartItems} />
+      <Nav toggleCart={toggleCart}/>
+      <Cart cartShown={cartShown}/>
       <div className="hero" style = {{backgroundImage: `url(${hero})`}}>
         <div className="heroText">
           <h1>Gaze</h1>

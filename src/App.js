@@ -6,21 +6,39 @@ import productList from "./assets/Products";
 
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
+  const [cartShown, setCartShown] = useState(false);
   const addToCart = () => {
 
   }
 
+  const toggleCart = () => {
+    setCartShown(prevState => !prevState);
+  }
+
+
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/"
-          element={<Home products={productList} cartItems={cartItems} />}
-        />
-        <Route path="/shop"
-          element={<Shop products={productList} cartItems={cartItems} addToCart={addToCart}/>}
-        />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/"
+            element={<Home
+              products={productList}
+              cartItems={cartItems}
+              cartShown={cartShown}
+              toggleCart={toggleCart} />}
+          />
+          <Route path="/shop"
+            element={<Shop 
+              products={productList}
+              cartItems={cartItems}
+              addToCart={addToCart}
+              cartShown={cartShown}
+              toggleCart={toggleCart} />}
+          />
+        </Routes>
+      </BrowserRouter>
+    </div>
   )
 }
 

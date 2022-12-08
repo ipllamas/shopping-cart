@@ -258,7 +258,6 @@ table {
 /*Shopping Cart display styling*/
 /*#region*/
 .shoppingCart {
-  display: none;
   background-color: #00000080;
   position: fixed;
   width: 100vw;
@@ -270,8 +269,8 @@ table {
   background-color: var(--gray);
   position: absolute;
   padding: 1rem;
-  width: 60%;
-  height: 60%;
+  width: 25%;
+  height: 50%;
   left: 50%;
   top: 50%;
   transform: translate( -50%, -50%);
