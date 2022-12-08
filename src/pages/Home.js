@@ -12,7 +12,7 @@ const Home = (props) => {
   return (  
     <div className="container">
       <Nav toggleCart={toggleCart}/>
-      <Cart cartShown={cartShown}/>
+      <Cart toggleCart={toggleCart} cartShown={cartShown}/>
       <div className="hero" style = {{backgroundImage: `url(${hero})`}}>
         <div className="heroText">
           <h1>Gaze</h1>

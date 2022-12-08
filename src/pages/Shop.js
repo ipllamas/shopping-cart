@@ -12,7 +12,7 @@ const Shop = (props) => {
   return (
     <div className="container shopContainer">
       <Nav toggleCart={toggleCart}/>
-      <Cart cartShown={cartShown}/>
+      <Cart toggleCart={toggleCart} cartShown={cartShown}/>
       <div className="productContainer"> 
         {productList.map((product) => {
           return (
