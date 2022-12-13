@@ -11,7 +11,6 @@ const App = () => {
     INITIAL_CART[i].quantity = 0;
   }
 
-
   const [cartItems, setCartItems] = useState(INITIAL_CART);
   const [cartShown, setCartShown] = useState(false);
 
@@ -29,7 +28,7 @@ const App = () => {
         return item;
       }
     })
-    
+
     setCartItems(newCart);
   }
 
