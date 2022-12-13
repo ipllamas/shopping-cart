@@ -18,7 +18,7 @@ const Shop = (props) => {
           return (
             <ItemCard image={product.image}
               name={product.name}
-              addCart={addToCart}
+              addCart={() => addToCart(product)}
               key={product.id}/>
           )
         })}
