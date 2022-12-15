@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
+import CartItemCard from './CartItemCard.js';
 
 const Cart = (props) => {
   const toggleCart = props.toggleCart;
   const cartItems = props.cartItems;
   const cartShown = props.cartShown;
+  const adjustQuantity = props.adjustQuantity;
   const [cartTotal, setCartTotal] = useState({totalQuantity: 0, totalPrice: 0});
 
   useEffect(() => {
@@ -26,7 +28,10 @@ const Cart = (props) => {
               {cartTotal.totalQuantity === 0 ? <p>Your cart is empty.</p> :
               cartItems.map(item => {
                 if(item.quantity>0) {
-                  return <p>{item.name}</p>;
+                  /* return <p>{item.name}</p>; */
+                  return <CartItemCard product={item}
+                    adjustQuantity={adjustQuantity}
+                    key={item.id} />
                 } else{
                   return null;
                 }

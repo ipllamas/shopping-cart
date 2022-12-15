@@ -8,11 +8,13 @@ const Home = (props) => {
   const cartItems = props.cartItems
   const cartShown = props.cartShown;
   const toggleCart = props.toggleCart;
+  const adjustQuantity = props.adjustQuantity;
 
   return (  
     <div className="container">
       <Nav toggleCart={toggleCart}/>
-      <Cart toggleCart={toggleCart} cartItems={cartItems} cartShown={cartShown}/>
+      <Cart toggleCart={toggleCart} cartItems={cartItems}
+        adjustQuantity={adjustQuantity} cartShown={cartShown}/>
       <div className="hero" style = {{backgroundImage: `url(${hero})`}}>
         <div className="heroText">
           <h1>Gaze</h1>

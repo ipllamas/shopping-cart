@@ -8,11 +8,13 @@ const Shop = (props) => {
   const addToCart = props.addToCart;
   const cartShown = props.cartShown;
   const toggleCart = props.toggleCart;
+  const adjustQuantity = props.adjustQuantity;
 
   return (
     <div className="container shopContainer">
       <Nav toggleCart={toggleCart}/>
-      <Cart toggleCart={toggleCart} cartItems={cartItems} cartShown={cartShown}/>
+      <Cart toggleCart={toggleCart} cartItems={cartItems}
+      adjustQuantity={adjustQuantity} cartShown={cartShown}/>
       <div className="productContainer"> 
         {productList.map((product) => {
           return (

@@ -282,6 +282,7 @@ table {
 
 .cartList {
   flex-grow: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -292,3 +293,18 @@ table {
 }
 /*#endregion*/
 
+
+/*Cart Item Card styling*/
+/*#region*/
+.cartItemContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 24px;
+}
+
+.cartItemContainer img {
+  width: 100px;
+}
+
+/*#endregion*/

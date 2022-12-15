@@ -50,7 +50,8 @@ const App = () => {
               products={productList}
               cartItems={cartItems}
               cartShown={cartShown}
-              toggleCart={toggleCart} />}
+              toggleCart={toggleCart} 
+              adjustQuantity={adjustQuantity} />}
           />
           <Route path="/shop"
             element={<Shop 
@@ -58,7 +59,8 @@ const App = () => {
               cartItems={cartItems}
               addToCart={addToCart}
               cartShown={cartShown}
-              toggleCart={toggleCart} />}
+              toggleCart={toggleCart}
+              adjustQuantity={adjustQuantity} />}
           />
         </Routes>
       </BrowserRouter>
