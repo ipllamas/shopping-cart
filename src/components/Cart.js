@@ -23,21 +23,30 @@ const Cart = (props) => {
     return (
       <div onClick={toggleCart} className='shoppingCart'>
         <div onClick={e => e.stopPropagation()} className="cartContainer">
-          <h1>Your Cart</h1>
-            <div className="cartList">
-              {cartTotal.totalQuantity === 0 ? <p>Your cart is empty.</p> :
-              cartItems.map(item => {
-                if(item.quantity>0) {
-                  /* return <p>{item.name}</p>; */
-                  return <CartItemCard product={item}
-                    adjustQuantity={adjustQuantity}
-                    key={item.id} />
-                } else{
-                  return null;
-                }
-              }
-              )}
-            </div>
+          <div className="cartList">
+            {cartTotal.totalQuantity === 0 ?
+              <p className="emptyMessage">Your cart is empty.</p> :
+              <div>
+                <h1 className="cartHeader">Your Cart</h1>
+                <p>Item</p>
+                <p>Quantity</p>
+                <p>Price</p>
+                {cartItems.map(item => {
+                  if(item.quantity>0) {
+                    return <CartItemCard className="cartItemContainer" product={item}
+                      adjustQuantity={adjustQuantity}
+                      key={item.id} />
+                  } else{
+                    return null;
+                  }
+                })}
+                <div className="cartFooter">
+                  <button>CHECKOUT</button>
+                  <p>Total: ${cartTotal.totalPrice}</p>
+                </div>
+              </div>
+            }
+          </div>
         </div>
       </div>
     )
