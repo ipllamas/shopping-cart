@@ -1,4 +1,5 @@
 import Nav from "../components/Nav";
+import hero from "../assets/starrysky.jpg";
 import ItemCard from '../components/ItemCard';
 import Cart from "../components/Cart";
 
@@ -11,7 +12,7 @@ const Shop = (props) => {
   const adjustQuantity = props.adjustQuantity;
 
   return (
-    <div className="container shopContainer">
+    <div className="container shopContainer" style ={{backgroundImage: `url(${hero})`}}>
       <Nav toggleCart={toggleCart}/>
       <Cart toggleCart={toggleCart} cartItems={cartItems}
       adjustQuantity={adjustQuantity} cartShown={cartShown}/>
@@ -20,6 +21,7 @@ const Shop = (props) => {
           return (
             <ItemCard image={product.image}
               name={product.name}
+              price={product.price}
               addCart={() => addToCart(product)}
               key={product.id}/>
           )
